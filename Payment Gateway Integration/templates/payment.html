@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Page</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <h1>Payment Page</h1>
+    <form action="/charge" method="POST">
+        <input type="hidden" name="amount" value="{{ amount }}">
+        <script
+            src="https://checkout.stripe.com/checkout.js"
+            class="stripe-button"
+            data-key="pk_test_51NL6X2SBgzSntQ2j71s7V1oqbKPHqj0DKUZYJFrWmP5rjlZZNCoA3ZSXZYiBEehBkBFFWoqjDfUU2GM0eGuedjGB00Y7gB6SCU"  
+            data-amount="{{ amount }}"  
+            data-name="Donation to save lives"
+            data-description="Donation for cancer patients"
+            data-image="https://th.bing.com/th/id/R.c7b0386222794a742df69d85eca38c57?rik=X1%2bcPl6T1GPVEA&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f12%2fSave-Lives-PNG-Photos.png&ehk=vIZbB9vQ1uKWgnq54onj10wOPRCt7dpqMRoLVjSs29g%3d&risl=&pid=ImgRaw&r=0"
+            data-locale="auto">
+        </script>
+    </form>
+</body>
+</html>
